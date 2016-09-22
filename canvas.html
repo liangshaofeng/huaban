@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/shape.js"></script>
+    <link rel="stylesheet" href="css/canvas.css">
+    <link rel="stylesheet" href="css/font.css">
+</head>
+<body>
+<div class="box">
+    <!--主菜单-->
+    <ul class="menu">
+        <li class="active">文件</li>
+        <li>画图</li>
+        <li>类型</li>
+        <li>颜色</li>
+        <li>线条宽度</li>
+        <li>擦除</li>
+    </ul>
+    <div class="body">
+        <!--左边工具条-->
+        <div class="tools">
+            <ul class="option option-active">
+                <li class="new kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    新建
+                </li>
+                <li class="back kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    返回</li>
+                <li class="save kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    保存</li>
+            </ul>
+            <ul class="option">
+                <li data-role="pen" class="pen kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    &nbsp;钢笔
+                </li>
+                <li data-role="line" class="zhixian kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    &nbsp;直线
+                </li>
+                <li data-role="rect" class="juxing kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    &nbsp;矩形
+                </li>
+                <li data-role="circle" class="yuan kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    &nbsp;&nbsp;圆
+                </li>
+                <li data-role="bian" class="duobianxing kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    多边形
+                </li>
+                <li data-role="jiao" class="duojiaoxing kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    多角形
+                </li>
+            </ul>
+            <ul class="option">
+                <li data-role="stroke" class="huaxian kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    画线
+                </li>
+                <li data-role="fill" class="tianchong kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    填充
+                </li>
+            </ul>
+            <ul class="option">
+                <li class="kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    线条色
+                    <input type="color" data-role="strokeStyle" style="width: 40px">
+                </li>
+                <li class="kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    填充色
+                    <input type="color" data-role="fillStyle" style="width: 40px">
+                </li>
+            </ul>
+            <ul class="option">
+                <li data-role="1" class="xi kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    细
+                </li>
+                <li data-role="5" class="zhong kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    中
+                </li>
+                <li data-role="10" class="cu kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    粗
+                </li>
+                <li class="input kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    <input type="number" placeholder="请输入线条宽度">
+                </li>
+            </ul>
+            <ul class="option">
+                <li class="kuang">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    <input type="number" placeholder="请输入橡皮大小">
+                </li>
+            </ul>
+        </div>
+        <!--画布-->
+        <div class="canvas">
+            <canvas width="832" height="460"></canvas>
+            <div class="copy"></div>
+            <div class="xp"></div>
+        </div>
+    </div>
+
+</div>
+<div class="imgbox">
+    <img src="images/huahe.png" alt="">
+</div>
+<div class="imgbox1">
+    <img src="images/qier.png" alt="">
+</div>
+</body>
+</html>
